@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Menus - KHAIMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">KHAIMA</a>
+        <div class="header-tagline">Mediterranean & Asian inspired food for yoga & wellness retreats on Koh Phangan
+        </div>
+        <nav class="nav">
+            <a href="menu.html" class="nav-link">Menu</a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1 class="page-title">The Art of <br>Nourishment</h1>
+        <p>At KHAIMA, we believe food is the foundation of a transformative retreat experience. Our Mediterranean &
+            Asian fusion menus are meticulously designed to support your yoga practice, providing vibrant energy and
+            deep nourishment without the heaviness.</p>
+        <p
+            style="margin-top: 3rem; font-size: 0.8rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 0.6; text-align: center;">
+            Tap a card to explore our offerings</p>
+    </section>
+
+    <main class="cards-section" id="menu-cards">
+        <div class="cards-grid">
+
+            <!-- ── CARD 1: RETREAT ── -->
+            <div class="card" id="c1">
+                <div class="card-face card-front" onclick="flipCard('c1')">
+                    <img class="front-img" src="images/retreat_breakfast.png" alt="Healthy retreat catering spread">
+                    <span class="front-num">01</span>
+                    <div class="front-overlay">
+                        <h2 class="card-title">Retreat<br><em>Catering</em></h2>
+                        <div class="card-tags">
+                            <span class="card-tag">Vegetarian-forward</span>
+                            <span class="card-tag">Vegan options</span>
+                            <span class="card-tag">Gluten-free</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-face card-back">
+                    <div class="back-header">
+                        <div>
+                            <p class="back-eyebrow">01 : Retreat Catering</p>
+                            <h3 class="back-title">Core <em>Offer</em></h3>
+                        </div>
+                        <button class="back-btn" onclick="flipCard('c1')">← Back</button>
+                    </div>
+                    <div class="back-scroll">
+                        <div class="acc-item" id="ab1">
+                            <button class="acc-trigger" onclick="toggleAcc('ab1','c1')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Breakfast</span>
+                                    <span class="acc-sub">Choose 3–4 items daily</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Cold Selection</p>
+                                    <ul class="mlist">
+                                        <li>Tropical fruit platter</li>
+                                        <li>Coconut chia pudding <span class="tag">VG, GF</span></li>
+                                        <li>Homemade granola + coconut yogurt</li>
+                                        <li>Fresh banana bread or date loaf</li>
+                                    </ul>
+                                    <p class="col-label">Hot Selection</p>
+                                    <ul class="mlist">
+                                        <li>Scrambled eggs with fresh herbs</li>
+                                        <li>Tofu scramble with turmeric & vegetables <span class="tag">VG</span></li>
+                                        <li>Roasted sweet potatoes / Sautéed greens</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="acc-item" id="al1">
+                            <button class="acc-trigger" onclick="toggleAcc('al1','c1')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Lunch</span>
+                                    <span class="acc-sub">Light, Energizing Flow</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Salads : Choose 2</p>
+                                    <ul class="mlist">
+                                        <li>Quinoa tabbouleh <span class="tag">VG, GF</span></li>
+                                        <li>Thai green papaya salad (mild) <span class="tag">VG</span></li>
+                                        <li>Roasted pumpkin, rocket & seeds <span class="tag">VG, GF</span></li>
+                                    </ul>
+                                    <p class="col-label">Mains : Choose 1–2</p>
+                                    <ul class="mlist">
+                                        <li>Chickpea & vegetable coconut curry <span class="tag">VG, GF</span></li>
+                                        <li>Grilled chicken with lemongrass & herbs</li>
+                                        <li>Baked tofu with tamari & sesame <span class="tag">VG</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="acc-item" id="ad1">
+                            <button class="acc-trigger" onclick="toggleAcc('ad1','c1')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Dinner</span>
+                                    <span class="acc-sub">Comfort + Nourishment</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Mains : Choose 2</p>
+                                    <ul class="mlist">
+                                        <li>Slow-cooked vegetable massaman <span class="tag">VG, GF</span></li>
+                                        <li>Middle Eastern lentil & tomato stew <span class="tag">VG</span></li>
+                                        <li>Grilled fish with turmeric & lime</li>
+                                        <li>Moroccan-spiced chicken thighs</li>
+                                    </ul>
+                                    <p class="col-label">Sides : Choose 2</p>
+                                    <ul class="mlist">
+                                        <li>Roasted root vegetables</li>
+                                        <li>Couscous / Jasmine Rice / Quinoa</li>
+                                        <li>Steamed greens with ginger</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-block">
+                            <div class="price-row"><span class="price-row-label">Daily Range</span><span
+                                    class="price-row-val">350 – 700 THB</span></div>
+                            <div class="price-feature">
+                                <div>
+                                    <p class="price-row-label">Full Day (3 Meals)</p>
+                                    <p style="font-size: 0.6rem; opacity: 0.5; margin-top: 0.2rem;">
+                                        Per Person</p>
+                                </div>
+                                <span class="price-row-val">1,200 – 1,500 THB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 2: VILLA ── -->
+            <div class="card" id="c2">
+                <div class="card-face card-front" onclick="flipCard('c2')">
+                    <img class="front-img" src="images/villa_dinner.png" alt="Elegant villa dinner setting">
+                    <span class="front-num">02</span>
+                    <div class="front-overlay">
+                        <h2 class="card-title">Villa & Private<br><em>Chef Dinners</em></h2>
+                        <div class="card-tags">
+                            <span class="card-tag">6–20 Guests</span>
+                            <span class="card-tag">Family-style</span>
+                            <span class="card-tag">Chef on-site</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-face card-back">
+                    <div class="back-header">
+                        <div>
+                            <p class="back-eyebrow">02 : Villa & Private Chef</p>
+                            <h3 class="back-title">Curated <em>Sets</em></h3>
+                        </div>
+                        <button class="back-btn" onclick="flipCard('c2')">← Back</button>
+                    </div>
+                    <div class="back-scroll">
+                        <div class="acc-item" id="ava">
+                            <button class="acc-trigger" onclick="toggleAcc('ava','c2')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Mediterranean Night</span>
+                                    <span class="acc-sub">Platters & Grills</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Starters</p>
+                                    <ul class="mlist">
+                                        <li>Hummus, baba ganoush, warm pita</li>
+                                        <li>Tomato & cucumber salad</li>
+                                    </ul>
+                                    <p class="col-label">Mains</p>
+                                    <ul class="mlist">
+                                        <li>Grilled chicken shawarma</li>
+                                        <li>Falafel with organic tahini</li>
+                                        <li>Orange & date cake dessert</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="acc-item" id="avb">
+                            <button class="acc-trigger" onclick="toggleAcc('avb','c2')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Thai Fusion</span>
+                                    <span class="acc-sub">Mild & Clean</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Selection</p>
+                                    <ul class="mlist">
+                                        <li>Fresh spring rolls <span class="tag">VG</span></li>
+                                        <li>Massaman curry (chicken or veg)</li>
+                                        <li>Steamed fish with lime & herbs</li>
+                                        <li>Coconut ice cream with fruit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-block">
+                            <div class="price-feature">
+                                <div>
+                                    <p class="price-row-label">Indicative Pricing</p>
+                                    <p style="font-size: 0.6rem; opacity: 0.5;">Per Person
+                                    </p>
+                                </div>
+                                <span class="price-row-val">1,300 – 2,000 THB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── CARD 3: EVENTS ── -->
+            <div class="card" id="c3">
+                <div class="card-face card-front" onclick="flipCard('c3')">
+                    <img class="front-img" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80"
+                        alt="Buffet catering setup">
+                    <span class="front-num">03</span>
+                    <div class="front-overlay">
+                        <h2 class="card-title">Events &<br><em>Buffets</em></h2>
+                        <div class="card-tags">
+                            <span class="card-tag">20–80 Guests</span>
+                            <span class="card-tag">Full Setup</span>
+                            <span class="card-tag">Custom Menus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-face card-back">
+                    <div class="back-header">
+                        <div>
+                            <p class="back-eyebrow">03 : Events & Buffets</p>
+                            <h3 class="back-title">Grand <em>Buffet</em></h3>
+                        </div>
+                        <button class="back-btn" onclick="flipCard('c3')">← Back</button>
+                    </div>
+                    <div class="back-scroll">
+                        <div class="acc-item" id="aec">
+                            <button class="acc-trigger" onclick="toggleAcc('aec','c3')">
+                                <div class="acc-left">
+                                    <span class="acc-name">Cold & Hot Stations</span>
+                                    <span class="acc-sub">Full Variety</span>
+                                </div>
+                                <div class="acc-right"><span class="acc-chevron"></span></div>
+                            </button>
+                            <div class="acc-body">
+                                <div class="acc-inner">
+                                    <p class="col-label">Cold</p>
+                                    <ul class="mlist">
+                                        <li>Quinoa & roasted vegetable salad</li>
+                                        <li>Mixed garden greens with infusions</li>
+                                    </ul>
+                                    <p class="col-label">Hot</p>
+                                    <ul class="mlist">
+                                        <li>Thai red curry (veg/chicken)</li>
+                                        <li>Stir-fried seasonal greens</li>
+                                        <li>Grilled fish platform</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-block">
+                            <div class="price-feature">
+                                <div>
+                                    <p class="price-row-label">Group Pricing</p>
+                                    <p style="font-size: 0.6rem; opacity: 0.5;">Per Person
+                                    </p>
+                                </div>
+                                <span class="price-row-val">750 – 1,200 THB</span>
+                            </div>
+                            <p
+                                style="font-family: var(--font-sec); font-size: 0.7rem; opacity: 0.6; margin-top: 1rem; text-align: center;">
+                                *Excluding delivery, setup & equipment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="contact-section" id="enquiry"
+        style="padding: 8rem 4rem; border-top: 1px solid rgba(230, 255, 0, 0.1); text-align: center;">
+        <div style="margin-bottom: 4rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <a href="#menu-cards" class="arrow-icon" style="transform: rotate(-90deg); display: flex;">→</a>
+                <span
+                    style="font-family: var(--font-sec); font-size: 0.7rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 0.6; text-transform: uppercase;">Scroll
+                    to see menu</span>
+            </div>
+            <h2 class="section-title" style="margin-bottom: 2rem;">Get in Touch</h2>
+            <p style="max-width: 600px; margin: 0 auto;">
+                Ready to elevate your retreat experience? Contact us directly to discuss your vision and receive a
+                curated menu proposal.
+            </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 3rem; margin-top: 2rem;">
+            <div class="contact-item">
+                <p
+                    style="font-family: var(--font-sec); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--color-highlight); margin-bottom: 0.5rem; opacity: 0.7;">
+                    Email Us</p>
+                <a href="mailto:thibault@epevents.net"
+                    style="font-family: var(--font-main); font-size: 2.5rem; font-weight: 300; color: var(--color-text-white); transition: var(--transition-fast);">thibault@epevents.net</a>
+            </div>
+
+            <div class="contact-item">
+                <p
+                    style="font-family: var(--font-sec); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--color-highlight); margin-bottom: 0.5rem; opacity: 0.7;">
+                    Phone</p>
+                <a href="tel:+66838798876"
+                    style="font-family: var(--font-main); font-size: 2.5rem; font-weight: 300; color: var(--color-text-white); transition: var(--transition-fast);">+66
+                    83 879 8876</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="logo" style="font-size: 1.2rem; margin-bottom: 0.5rem;">KHAIMA</h3>
+                <p style="opacity: 0.6; font-size: 0.8rem;">Retreat Catering · Koh Phangan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

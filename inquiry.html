@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Menu & Tasting - KHAIMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">KHAIMA</a>
+        <div class="header-tagline">Mediterranean & Asian inspired food for yoga & wellness retreats on Koh Phangan
+        </div>
+        <nav class="nav">
+            <a href="menu.html" class="nav-link">Menu</a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1 class="page-title">Request Menu <br>& Tasting</h1>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear about your retreat and create a custom menu that perfectly complements your
+                    wellness vision.</p>
+
+                <div class="form-field" style="margin-top: 3rem;">
+                    <label>Email</label>
+                    <p><a href="mailto:thibault@epevents.net">thibault@epevents.net</a></p>
+                </div>
+
+                <div class="form-field">
+                    <label>Phone / WhatsApp</label>
+                    <p><a href="tel:+66838798876">+66 83 879 8876</a></p>
+                </div>
+
+                <div class="form-field">
+                    <label>Location</label>
+                    <p>Koh Phangan, Thailand</p>
+                </div>
+            </div>
+
+            <div class="inquiry-container" style="padding: 0;">
+                <form id="inquiryForm" class="inquiry-form" style="grid-template-columns: 1fr;">
+                    <div class="form-field">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="type">Catering Type</label>
+                        <select id="type" name="type" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="retreat">Retreat Catering (Core Offer)</option>
+                            <option value="villa">Villa & Private Chef Dinner</option>
+                            <option value="event">Event & Buffet (20+ pax)</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="dietary">Dietary Requirements</label>
+                        <textarea id="dietary" name="dietary" rows="3"
+                            placeholder="Vegan, gluten-free, etc."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Your Vision</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Tell us about your retreat..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn-full">Send Inquiry</button>
+                </form>
+
+                <div id="formSuccess"
+                    style="display:none; text-align: center; padding: 4rem; background: var(--color-glass); border-radius: 12px;">
+                    <h3 style="color: var(--color-highlight); margin-bottom: 1rem;">Thank You</h3>
+                    <p>We'll be in touch within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>Booking Notice</h4>
+                <p>We recommend booking at least 2-3 weeks in advance during peak season.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Tastings</h4>
+                <p>We offer tasting sessions for groups booking our catering services.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Dietary Needs</h4>
+                <p>We specialize in vegan, vegetarian, gluten-free, and allergy-friendly menus.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Service Area</h4>
+                <p>We serve the entire island of Koh Phangan.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="logo" style="font-size: 1.2rem; margin-bottom: 0.5rem;">KHAIMA</h3>
+                <p style="opacity: 0.6; font-size: 0.8rem;">Retreat Catering · Koh Phangan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

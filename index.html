@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHAIMA - Retreat Catering Koh Phangan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">KHAIMA</a>
+        <div class="header-tagline">Mediterranean & Asian inspired food for yoga & wellness retreats on Koh Phangan
+        </div>
+        <nav class="nav">
+            <a href="menu.html" class="nav-link">Menu</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background-image">
+            <img src="images/bg-island.png" alt="Koh Phangan Island View">
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text-block">
+                <h1 class="hero-title-main">Retreat <br>Catering.</h1>
+                <h2 class="hero-title-sub">Designed for Retreat Flow</h2>
+                <p class="hero-subheading">Elevating the retreat experience with vibrant, <br>Mediterranean & Asian
+                    fusion flavors designed <br>for flow, energy, and nourishment.</p>
+                <a href="menu.html#enquiry" class="btn-ghost" id="cta-button">Request Menu & Tasting</a>
+            </div>
+
+            <div class="hero-card-perspective">
+                <div class="hero-flippable-card-wrapper">
+                    <div id="hero-card" class="hero-flippable-card" onclick="this.classList.toggle('is-flipped')">
+                        <!-- Front: Logo -->
+                        <div class="hero-card-face hero-card-front">
+                            <div class="logo-inner-wrapper">
+                                <img src="images/logo-khaima.png" alt="KHAIMA Symbol" class="parallax-logo">
+                            </div>
+                        </div>
+                        <!-- Back: Food photography -->
+                        <div class="hero-card-face hero-card-back">
+                            <img src="images/food-hero-veg.png" alt="Vegetarian Mediterranean & Asian Fusion Plates"
+                                class="parallax-img">
+                        </div>
+                    </div>
+                    <!-- Label Overlay (Stationary outside flip) -->
+                    <div class="floating-label">
+                        <a href="#storytelling" class="arrow-icon" onclick="event.stopPropagation()">→</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="storytelling">
+        <div class="about-image">
+            <img src="images/about-food.png" alt="Mediterranean-Asian Fusion Spread">
+        </div>
+        <div class="about-text">
+            <h2>The Art of <br>Retreat Flow</h2>
+            <p>At KHAIMA, we believe food is the foundation of a transformative retreat experience. Our Mediterranean &
+                Asian fusion menus are meticulously designed to support your yoga practice, providing vibrant energy and
+                deep nourishment without the heaviness.</p>
+            <a href="menu.html" class="btn-ghost" style="margin-top: 2rem;">Explore Menus</a>
+        </div>
+    </section>
+
+    <!-- Visual Storytelling Blocks -->
+    <div class="story-block">
+        <div class="story-image">
+            <img src="images/island-vibe.png" alt="Island Paradise Freedom">
+        </div>
+        <div class="story-text">
+            <p>Paradise Found</p>
+            <h2>Unbound <br>Spirit. <br>Island <br>Freedom.</h2>
+        </div>
+    </div>
+
+    <div class="story-quote-block">
+        <h3>"The most profound transformations happen when nourishment meets nature."</h3>
+        <span class="quote-tag">Defined by Flow</span>
+    </div>
+
+    <div class="story-block">
+        <div class="story-image">
+            <img src="images/health-vibe.png" alt="Vibrant Health Nutrition">
+        </div>
+        <div class="story-text">
+            <p>Pure Vitality</p>
+            <h2>Nourish. <br>Revitalize. <br>Vibrancy.</h2>
+        </div>
+    </div>
+
+    <div class="story-block">
+        <div class="story-image">
+            <img src="images/enjoyment-vibe.png" alt="Island Dining Enjoyment">
+        </div>
+        <div class="story-text">
+            <p>Enjoyment & Connection</p>
+            <h2>Savor. <br>Enjoy. <br>Connect.</h2>
+        </div>
+    </div>
+
+    <section class="process-section">
+        <h2 class="section-title">How We Flow</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="step-num">01</span>
+                <h3 class="step-title">Inquiry</h3>
+                <p class="step-desc">Share your retreat vision, dates, and dietary needs with us through our simple
+                    inquiry form.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">02</span>
+                <h3 class="step-title">Tasting</h3>
+                <p class="step-desc">We invite you to experience the flavors firsthand with a curated tasting session on
+                    the island.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">03</span>
+                <h3 class="step-title">Curation</h3>
+                <p class="step-desc">Together, we design a custom menu that perfectly complements your retreat's theme
+                    and flow.</p>
+            </div>
+            <div class="process-step">
+                <span class="step-num">04</span>
+                <h3 class="step-title">Delivery</h3>
+                <p class="step-desc">Our team manages everything from sourcing to service, ensuring you can focus
+                    entirely on your guests.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="logo" style="font-size: 1.2rem; margin-bottom: 0.5rem;">KHAIMA</h3>
+                <p style="opacity: 0.6; font-size: 0.8rem;">Retreat Catering · Koh Phangan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
