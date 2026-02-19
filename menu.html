@@ -24,38 +24,39 @@
     </header>
 
     <section class="page-hero">
-        <h1 class="page-title">The Art of <br>Nourishment</h1>
-        <p>At KHAIMA, we believe food is the foundation of a transformative retreat experience. Our Mediterranean &
-            Asian fusion menus are meticulously designed to support your yoga practice, providing vibrant energy and
-            deep nourishment without the heaviness.</p>
-        <p
-            style="margin-top: 3rem; font-size: 0.8rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 0.6; text-align: center;">
-            Tap a card to explore our offerings</p>
-    </section>
-
-    <div class="mobile-only-hero" style="display: none;">
-        <div class="page-hero-card-container">
-            <div class="mobile-logo-card" onclick="this.classList.toggle('is-flipped')">
-                <div class="mobile-card-face mobile-card-front">
-                    <img src="images/logo-khaima.png" alt="KHAIMA Logo" style="width: 60%; filter: invert(1);">
-                </div>
-                <div class="mobile-card-face mobile-card-back">
-                    <img src="images/food-hero-veg.png" alt="Healthy Food">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-side">
+                <h1 class="page-title">The Art of <br>Nourishment</h1>
+                <p>At KHAIMA, we believe food is the foundation of a transformative retreat experience. Our
+                    Mediterranean &
+                    Asian fusion menus are meticulously designed to support your yoga practice, providing vibrant energy
+                    and
+                    deep nourishment without the heaviness.</p>
+                <div class="desktop-only">
+                    <p
+                        style="margin-top: 3rem; font-size: 0.8rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 0.6;">
+                        Tap a card to explore our offerings</p>
                 </div>
             </div>
-            <p
-                style="margin-top: 2rem; font-size: 0.8rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 0.6; text-align: center;">
-                Tap for a taste of KHAIMA</p>
-        </div>
-    </div>
 
-    <style>
-        @media (max-width: 768px) {
-            .mobile-only-hero {
-                display: block !important;
-            }
-        }
-    </style>
+            <!-- Mobile Hero Card (Flippable Logo-to-Food) -->
+            <div class="mobile-hero-container mobile-only">
+                <div class="hero-flippable-card" onclick="this.classList.toggle('is-flipped')">
+                    <div class="hero-card-face hero-card-front">
+                        <div class="logo-inner-wrapper">
+                            <img src="images/logo-khaima.png" alt="KHAIMA" class="parallax-logo"
+                                style="filter: invert(1);">
+                        </div>
+                    </div>
+                    <div class="hero-card-face hero-card-back">
+                        <img src="images/food-hero-veg.png" alt="Healthy Food">
+                    </div>
+                </div>
+                <p class="tap-hint">Tap for a taste of KHAIMA</p>
+            </div>
+        </div>
+    </section>
+
 
     <main class="cards-section" id="menu-cards">
         <div class="cards-grid">
@@ -70,6 +71,7 @@
                         <div class="card-tags">
                             <span class="card-tag">Vegetarian-forward</span>
                             <span class="card-tag">Vegan options</span>
+                            <span class="card-tag">Gluten-free</span>
                         </div>
                     </div>
                 </div>
@@ -189,6 +191,7 @@
                         <div class="card-tags">
                             <span class="card-tag">6–20 Guests</span>
                             <span class="card-tag">Family-style</span>
+                            <span class="card-tag">Chef on-site</span>
                         </div>
                     </div>
                 </div>
@@ -273,6 +276,7 @@
                         <div class="card-tags">
                             <span class="card-tag">20–80 Guests</span>
                             <span class="card-tag">Full Setup</span>
+                            <span class="card-tag">Custom Menus</span>
                         </div>
                     </div>
                 </div>

@@ -370,19 +370,72 @@ p {
     margin-bottom: 2rem;
     line-height: 0.95;
     word-break: break-word;
-    /* Prevent overflow on mobile */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .page-hero {
         padding: 8rem 2rem 4rem;
         text-align: center;
     }
+}
 
-    .page-hero p {
-        font-size: 1rem;
+.hero-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-text-side {
+    flex: 1;
+}
+
+.mobile-hero-container {
+    flex: 0 0 350px;
+}
+
+.tap-hint {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    color: var(--color-highlight);
+    opacity: 0.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .mobile-hero-container {
+        flex: 1;
+        width: 100%;
+        max-width: 400px;
+        margin: 1rem auto;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
     }
 }
+
 
 .about-section {
     padding: 10rem 4rem;
@@ -714,7 +767,11 @@ p {
     position: relative;
     z-index: 2;
     padding: 3rem;
-    background: linear-gradient(to top, rgba(10, 11, 9, 0.95) 0%, rgba(10, 11, 9, 0.4) 40%, transparent 100%);
+    background: linear-gradient(to top, rgba(10, 11, 9, 0.9) 0%, rgba(10, 11, 9, 0.3) 50%, transparent 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .front-num {
@@ -753,14 +810,22 @@ p {
 
 .card-tag {
     font-family: var(--font-sec);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-highlight);
-    border: 1px solid rgba(230, 255, 0, 0.3);
-    border-radius: 4px;
-    padding: 0.4rem 0.8rem;
-    background: rgba(230, 255, 0, 0.05);
+    border: 1px solid var(--color-highlight);
+    /* Neon border */
+    border-radius: 100px;
+    padding: 0.45rem 1rem;
+    background: transparent;
+    transition: var(--transition-fast);
+}
+
+.card-tag:hover {
+    background: var(--color-highlight);
+    color: #000;
 }
 
 /* Footer & Other */
