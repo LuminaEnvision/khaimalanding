@@ -168,7 +168,22 @@ function toggleAcc(id, cardId) {
     el.classList.toggle('open');
 }
 
+function toggleMenuBlock(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Close others
+    document.querySelectorAll('.menu-block-main.open').forEach(item => {
+        if (item !== el) {
+            item.classList.remove('open');
+        }
+    });
+
+    el.classList.toggle('open');
+}
+
 // Add to Window for Global Access
 window.flipCard = flipCard;
 window.toggleAcc = toggleAcc;
-window.resetForm = resetForm;
+window.toggleMenuBlock = toggleMenuBlock;
+

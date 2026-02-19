@@ -34,34 +34,31 @@
     </section>
 
     <main class="cards-section" id="menu-cards">
-        <div class="cards-grid">
+        <div class="menu-blocks-container">
 
-            <!-- ── CARD 1: RETREAT ── -->
-            <div class="card" id="c1">
-                <div class="card-face card-front" onclick="flipCard('c1')">
-                    <img class="front-img" src="images/retreat_breakfast.png" alt="Healthy retreat catering spread">
-                    <span class="front-num">01</span>
-                    <div class="front-overlay">
-                        <h2 class="card-title">Retreat<br><em>Catering</em></h2>
-                        <div class="card-tags">
-                            <span class="card-tag">Vegetarian-forward</span>
-                            <span class="card-tag">Vegan options</span>
-                            <span class="card-tag">Gluten-free</span>
+            <!-- ── BLOCK 1: RETREAT CATERING ── -->
+            <div class="menu-block-main" id="mb1">
+                <button class="menu-block-trigger" onclick="toggleMenuBlock('mb1')">
+                    <div class="menu-block-info">
+                        <span class="block-num">01</span>
+                        <div class="block-text">
+                            <h2 class="block-title">Retreat <em>Catering</em></h2>
+                            <div class="block-tags">
+                                <span class="card-tag">Vegetarian-forward</span>
+                                <span class="card-tag">Vegan options</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card-face card-back">
-                    <div class="back-header">
-                        <div>
-                            <p class="back-eyebrow">01 : Retreat Catering</p>
-                            <h3 class="back-title">Core <em>Offer</em></h3>
-                        </div>
-                        <button class="back-btn" onclick="flipCard('c1')">← Back</button>
+                    <div class="block-status">
+                        <span class="status-label">Explore Menus</span>
+                        <span class="block-chevron"></span>
                     </div>
-                    <div class="back-scroll">
+                </button>
+
+                <div class="menu-block-content">
+                    <div class="menu-inner-grid">
                         <div class="acc-item" id="ab1">
-                            <button class="acc-trigger" onclick="toggleAcc('ab1','c1')">
+                            <button class="acc-trigger" onclick="toggleAcc('ab1','mb1')">
                                 <div class="acc-left">
                                     <span class="acc-name">Breakfast</span>
                                     <span class="acc-sub">Choose 3–4 items daily</span>
@@ -88,7 +85,7 @@
                         </div>
 
                         <div class="acc-item" id="al1">
-                            <button class="acc-trigger" onclick="toggleAcc('al1','c1')">
+                            <button class="acc-trigger" onclick="toggleAcc('al1','mb1')">
                                 <div class="acc-left">
                                     <span class="acc-name">Lunch</span>
                                     <span class="acc-sub">Light, Energizing Flow</span>
@@ -114,7 +111,7 @@
                         </div>
 
                         <div class="acc-item" id="ad1">
-                            <button class="acc-trigger" onclick="toggleAcc('ad1','c1')">
+                            <button class="acc-trigger" onclick="toggleAcc('ad1','mb1')">
                                 <div class="acc-left">
                                     <span class="acc-name">Dinner</span>
                                     <span class="acc-sub">Comfort + Nourishment</span>
@@ -139,49 +136,45 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="price-block">
-                            <div class="price-row"><span class="price-row-label">Daily Range</span><span
-                                    class="price-row-val">350 – 700 THB</span></div>
-                            <div class="price-feature">
-                                <div>
-                                    <p class="price-row-label">Full Day (3 Meals)</p>
-                                    <p style="font-size: 0.6rem; opacity: 0.5; margin-top: 0.2rem;">
-                                        Per Person</p>
-                                </div>
-                                <span class="price-row-val">1,200 – 1,500 THB</span>
+                    <div class="price-block">
+                        <div class="price-row"><span class="price-row-label">Daily Range</span><span
+                                class="price-row-val">350 – 700 THB</span></div>
+                        <div class="price-feature">
+                            <div>
+                                <p class="price-row-label">Full Day (3 Meals)</p>
+                                <p style="font-size: 0.6rem; opacity: 0.5; margin-top: 0.2rem;">Per Person</p>
                             </div>
+                            <span class="price-row-val">1,200 – 1,500 THB</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ── CARD 2: VILLA ── -->
-            <div class="card" id="c2">
-                <div class="card-face card-front" onclick="flipCard('c2')">
-                    <img class="front-img" src="images/villa_dinner.png" alt="Elegant villa dinner setting">
-                    <span class="front-num">02</span>
-                    <div class="front-overlay">
-                        <h2 class="card-title">Villa & Private<br><em>Chef Dinners</em></h2>
-                        <div class="card-tags">
-                            <span class="card-tag">6–20 Guests</span>
-                            <span class="card-tag">Family-style</span>
-                            <span class="card-tag">Chef on-site</span>
+            <!-- ── BLOCK 2: VILLA & PRIVATE CHEF ── -->
+            <div class="menu-block-main" id="mb2">
+                <button class="menu-block-trigger" onclick="toggleMenuBlock('mb2')">
+                    <div class="menu-block-info">
+                        <span class="block-num">02</span>
+                        <div class="block-text">
+                            <h2 class="block-title">Villa & Private<br><em>Chef Dinners</em></h2>
+                            <div class="block-tags">
+                                <span class="card-tag">6–20 Guests</span>
+                                <span class="card-tag">Family-style</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="block-status">
+                        <span class="status-label">Explore Menus</span>
+                        <span class="block-chevron"></span>
+                    </div>
+                </button>
 
-                <div class="card-face card-back">
-                    <div class="back-header">
-                        <div>
-                            <p class="back-eyebrow">02 : Villa & Private Chef</p>
-                            <h3 class="back-title">Curated <em>Sets</em></h3>
-                        </div>
-                        <button class="back-btn" onclick="flipCard('c2')">← Back</button>
-                    </div>
-                    <div class="back-scroll">
+                <div class="menu-block-content">
+                    <div class="menu-inner-grid">
                         <div class="acc-item" id="ava">
-                            <button class="acc-trigger" onclick="toggleAcc('ava','c2')">
+                            <button class="acc-trigger" onclick="toggleAcc('ava','mb2')">
                                 <div class="acc-left">
                                     <span class="acc-name">Mediterranean Night</span>
                                     <span class="acc-sub">Platters & Grills</span>
@@ -206,7 +199,7 @@
                         </div>
 
                         <div class="acc-item" id="avb">
-                            <button class="acc-trigger" onclick="toggleAcc('avb','c2')">
+                            <button class="acc-trigger" onclick="toggleAcc('avb','mb2')">
                                 <div class="acc-left">
                                     <span class="acc-name">Thai Fusion</span>
                                     <span class="acc-sub">Mild & Clean</span>
@@ -225,48 +218,43 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="price-block">
-                            <div class="price-feature">
-                                <div>
-                                    <p class="price-row-label">Indicative Pricing</p>
-                                    <p style="font-size: 0.6rem; opacity: 0.5;">Per Person
-                                    </p>
-                                </div>
-                                <span class="price-row-val">1,300 – 2,000 THB</span>
+                    <div class="price-block">
+                        <div class="price-feature">
+                            <div>
+                                <p class="price-row-label">Indicative Pricing</p>
+                                <p style="font-size: 0.6rem; opacity: 0.5;">Per Person</p>
                             </div>
+                            <span class="price-row-val">1,300 – 2,000 THB</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ── CARD 3: EVENTS ── -->
-            <div class="card" id="c3">
-                <div class="card-face card-front" onclick="flipCard('c3')">
-                    <img class="front-img" src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80"
-                        alt="Buffet catering setup">
-                    <span class="front-num">03</span>
-                    <div class="front-overlay">
-                        <h2 class="card-title">Events &<br><em>Buffets</em></h2>
-                        <div class="card-tags">
-                            <span class="card-tag">20–80 Guests</span>
-                            <span class="card-tag">Full Setup</span>
-                            <span class="card-tag">Custom Menus</span>
+            <!-- ── BLOCK 3: EVENTS & BUFFETS ── -->
+            <div class="menu-block-main" id="mb3">
+                <button class="menu-block-trigger" onclick="toggleMenuBlock('mb3')">
+                    <div class="menu-block-info">
+                        <span class="block-num">03</span>
+                        <div class="block-text">
+                            <h2 class="block-title">Events &<br><em>Buffets</em></h2>
+                            <div class="block-tags">
+                                <span class="card-tag">20–80 Guests</span>
+                                <span class="card-tag">Full Setup</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="block-status">
+                        <span class="status-label">Explore Menus</span>
+                        <span class="block-chevron"></span>
+                    </div>
+                </button>
 
-                <div class="card-face card-back">
-                    <div class="back-header">
-                        <div>
-                            <p class="back-eyebrow">03 : Events & Buffets</p>
-                            <h3 class="back-title">Grand <em>Buffet</em></h3>
-                        </div>
-                        <button class="back-btn" onclick="flipCard('c3')">← Back</button>
-                    </div>
-                    <div class="back-scroll">
+                <div class="menu-block-content">
+                    <div class="menu-inner-grid">
                         <div class="acc-item" id="aec">
-                            <button class="acc-trigger" onclick="toggleAcc('aec','c3')">
+                            <button class="acc-trigger" onclick="toggleAcc('aec','mb3')">
                                 <div class="acc-left">
                                     <span class="acc-name">Cold & Hot Stations</span>
                                     <span class="acc-sub">Full Variety</span>
@@ -289,20 +277,19 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="price-block">
-                            <div class="price-feature">
-                                <div>
-                                    <p class="price-row-label">Group Pricing</p>
-                                    <p style="font-size: 0.6rem; opacity: 0.5;">Per Person
-                                    </p>
-                                </div>
-                                <span class="price-row-val">750 – 1,200 THB</span>
+                    <div class="price-block">
+                        <div class="price-feature">
+                            <div>
+                                <p class="price-row-label">Group Pricing</p>
+                                <p style="font-size: 0.6rem; opacity: 0.5;">Per Person</p>
                             </div>
-                            <p
-                                style="font-family: var(--font-sec); font-size: 0.7rem; opacity: 0.6; margin-top: 1rem; text-align: center;">
-                                *Excluding delivery, setup & equipment</p>
+                            <span class="price-row-val">750 – 1,200 THB</span>
                         </div>
+                        <p
+                            style="font-family: var(--font-sec); font-size: 0.7rem; opacity: 0.6; margin-top: 1rem; text-align: center;">
+                            *Excluding delivery, setup & equipment</p>
                     </div>
                 </div>
             </div>
