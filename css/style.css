@@ -83,22 +83,38 @@ p {
     left: 50%;
     transform: translateX(-50%);
     color: #FFF;
-    /* Pure white tagline */
     font-size: 1.1rem;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.4;
+    /* Reduced line height for wrapping */
     letter-spacing: 0.02em;
     width: auto;
+    text-align: center;
     white-space: nowrap;
     opacity: 0.7;
 }
 
+@media (max-width: 1024px) {
+    .header {
+        padding: 1.5rem 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-tagline {
+        display: none;
+        /* Hide tagline on mobile/tablet to avoid overlap */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
 .nav-link {
     color: #FFF;
-    /* Pure white nav links */
     font-weight: 700;
     font-size: 0.9rem;
-    font-weight: 600;
     letter-spacing: 0.05em;
 }
 
@@ -353,6 +369,19 @@ p {
     letter-spacing: -0.02em;
     margin-bottom: 2rem;
     line-height: 0.95;
+    word-break: break-word;
+    /* Prevent overflow on mobile */
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+    }
+
+    .page-hero p {
+        font-size: 1rem;
+    }
 }
 
 .about-section {
@@ -644,6 +673,26 @@ p {
     transform: scale(1);
     z-index: 2;
     pointer-events: all;
+}
+
+/* Card Mobile Adjustments */
+@media (max-width: 768px) {
+    .cards-section {
+        padding: 0 1.5rem 6rem;
+    }
+
+    .card {
+        height: 600px;
+        margin-bottom: 2rem;
+    }
+
+    .front-overlay {
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 2.2rem;
+    }
 }
 
 /* Front Face */
@@ -1027,6 +1076,24 @@ p {
     padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .acc-trigger {
+        padding: 1rem 1.5rem;
+    }
+
+    .acc-name {
+        font-size: 1rem;
+    }
+
+    .acc-sub {
+        font-size: 0.65rem;
+    }
+
+    .acc-inner {
+        padding: 0 1.2rem;
+    }
+}
+
 /* Content List */
 .col-label {
     font-size: 0.8rem;
@@ -1115,11 +1182,64 @@ p {
 @media (max-width: 1024px) {
     .cards-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 
     .card {
         height: auto;
-        min-height: 600px;
+        min-height: 550px;
+        width: 100%;
+    }
+}
+
+/* Start Screen / Hero Card Flip for Mobile */
+@media (max-width: 768px) {
+    .page-hero-card-container {
+        padding: 2rem;
+        perspective: 1500px;
+        margin-top: 2rem;
+    }
+
+    .mobile-logo-card {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .mobile-logo-card.is-flipped {
+        transform: rotateY(180deg);
+    }
+
+    .mobile-card-face {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(230, 255, 0, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-card-front {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        z-index: 2;
+    }
+
+    .mobile-card-back {
+        transform: rotateY(180deg);
+        z-index: 1;
+    }
+
+    .mobile-card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
