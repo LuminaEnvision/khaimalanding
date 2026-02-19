@@ -182,8 +182,44 @@ function toggleMenuBlock(id) {
     el.classList.toggle('open');
 }
 
+// ===================================
+// Intro Overlay Handling
+// ===================================
+const introOverlay = document.getElementById('intro-overlay');
+if (introOverlay) {
+    document.body.classList.add('intro-active');
+}
+
+function unlockScroll() {
+    const hint = document.getElementById('intro-hint');
+    const scrollHint = document.getElementById('scroll-hint');
+    const overlay = document.getElementById('intro-overlay');
+
+    if (!overlay) return;
+
+    if (hint) hint.style.opacity = '0';
+    if (scrollHint) {
+        scrollHint.style.opacity = '1';
+        scrollHint.style.transform = 'translateY(0)';
+    }
+
+    // Allow scrolling
+    document.body.classList.replace('intro-active', 'intro-scroll');
+
+    // Dismiss overlay on scroll
+    const dismissOnScroll = () => {
+        overlay.classList.add('dismissed');
+        window.removeEventListener('scroll', dismissOnScroll);
+    };
+
+    window.addEventListener('scroll', dismissOnScroll);
+}
+
+
 // Add to Window for Global Access
 window.flipCard = flipCard;
 window.toggleAcc = toggleAcc;
 window.toggleMenuBlock = toggleMenuBlock;
+window.unlockScroll = unlockScroll;
+
 

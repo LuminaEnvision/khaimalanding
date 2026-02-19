@@ -14,6 +14,21 @@
 </head>
 
 <body>
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-card-perspective">
+            <div id="intro-card" class="intro-card" onclick="this.classList.toggle('is-flipped'); unlockScroll();">
+                <div class="intro-card-face intro-card-front">
+                    <img src="images/logo-khaima.png" alt="KHAIMA" class="intro-logo">
+                </div>
+                <div class="intro-card-face intro-card-back">
+                    <img src="images/food-hero-veg.png" alt="KHAIMA Food">
+                </div>
+            </div>
+            <div id="intro-hint" class="intro-hint">Tap to explore</div>
+            <div id="scroll-hint" class="scroll-hint" style="opacity: 0; pointer-events: none;">Scroll to begin ↓</div>
+        </div>
+    </div>
+
     <header class="header">
         <a href="index.html" class="logo">KHAIMA</a>
         <div class="header-tagline">Mediterranean & Asian inspired food for yoga & wellness retreats on Koh Phangan
