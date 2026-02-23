@@ -201,6 +201,7 @@ function unlockScroll() {
     if (scrollHint) {
         scrollHint.style.opacity = '1';
         scrollHint.style.transform = 'translateY(0)';
+        scrollHint.style.pointerEvents = 'auto';
     }
 
     // Allow scrolling
@@ -214,6 +215,32 @@ function unlockScroll() {
 
     window.addEventListener('scroll', dismissOnScroll);
 }
+
+/** Dismiss intro overlay and scroll to hero (video section), not storytelling */
+function enterToHero() {
+    const overlay = document.getElementById('intro-overlay');
+    const hero = document.getElementById('hero');
+    if (!overlay || !hero) return;
+
+    unlockScroll();
+    overlay.classList.add('dismissed');
+    hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Arrow and "Scroll to enter" both take user to hero
+const introArrowBtn = document.getElementById('intro-arrow-btn');
+if (introArrowBtn) {
+    introArrowBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        enterToHero();
+    });
+}
+const scrollHintBtn = document.getElementById('scroll-hint');
+if (scrollHintBtn) {
+    scrollHintBtn.addEventListener('click', enterToHero);
+}
+
+window.enterToHero = enterToHero;
 
 
 // Add to Window for Global Access

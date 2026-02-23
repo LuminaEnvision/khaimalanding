@@ -23,13 +23,12 @@
                 <div class="intro-card-face intro-card-back">
                     <img src="images/food-hero-veg.png" alt="KHAIMA Food">
                     <div class="intro-back-overlay">
-                        <div class="intro-arrow">↓</div>
+                        <button type="button" class="intro-arrow" id="intro-arrow-btn" aria-label="Enter site">↓</button>
                     </div>
                 </div>
             </div>
             <div id="intro-hint" class="intro-hint">Tap to explore</div>
-            <div id="scroll-hint" class="scroll-hint" style="opacity: 0; pointer-events: none;">Scroll to enter KHAIMA
-            </div>
+            <button type="button" id="scroll-hint" class="scroll-hint" style="opacity: 0; pointer-events: none;">Scroll to enter KHAIMA</button>
         </div>
     </div>
 
@@ -42,9 +41,11 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-background-image">
-            <img src="images/bg-island.png" alt="Koh Phangan Island View">
+            <video autoplay muted loop playsinline id="hero-video" poster="images/bg-island.png">
+                <source src="images/backgroundvideo.mp4" type="video/mp4">
+            </video>
             <div class="video-overlay"></div>
         </div>
 
