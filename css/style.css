@@ -506,103 +506,346 @@ p {
     padding: 10rem 4rem;
 }
 
-/* Storytelling Sections */
-.story-block {
-    position: relative;
+/* ===================================
+   OUR STORY SECTION
+   =================================== */
+
+.our-story {
     padding: 10rem 4rem;
-    display: flex;
-    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Opening --- */
+.story-opening {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8rem;
-    min-height: 80vh;
+    align-items: start;
+    margin-bottom: 10rem;
 }
 
-.story-block:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.story-block .story-text {
-    flex: 1;
-}
-
-.story-block .story-text h2 {
-    font-family: var(--font-main);
-    font-size: clamp(48px, 6vw, 80px);
+.story-kicker {
+    font-family: var(--font-sec);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
     color: var(--color-highlight);
-    line-height: 0.95;
-    letter-spacing: -0.02em;
     margin-bottom: 2rem;
+}
+
+.story-left-label {
+    font-family: var(--font-main);
+    font-size: clamp(52px, 7vw, 96px);
     font-weight: 300;
+    color: var(--color-text-white);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
 }
 
-.story-block .story-image {
-    flex: 1.2;
-    height: 70vh;
-    border-radius: 4px;
+.story-left-label em {
+    color: var(--color-highlight);
+    font-style: italic;
+}
+
+.story-opening-text {
+    font-family: var(--font-sec);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--color-text-white);
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
+}
+
+.story-staccato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    border-left: 2px solid rgba(230, 255, 0, 0.3);
+    padding-left: 1.5rem;
+}
+
+.story-staccato span {
+    font-family: var(--font-sec);
+    font-size: clamp(14px, 1.3vw, 17px);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--color-text-white);
+    opacity: 0.45;
+    text-transform: uppercase;
+}
+
+.story-opening-subtext {
+    font-family: var(--font-sec);
+    font-size: clamp(16px, 1.5vw, 19px);
+    font-weight: 300;
+    color: var(--color-text-white);
+    opacity: 0.55;
+    line-height: 1.7;
+}
+
+/* --- Body --- */
+.story-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 9rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(247, 243, 234, 0.1);
+}
+
+.story-p {
+    font-family: var(--font-sec);
+    font-size: clamp(15px, 1.25vw, 17px);
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--color-text-white);
+    opacity: 0.55;
+    margin-bottom: 1.8rem;
+}
+
+.story-p--label {
+    opacity: 0.35;
+    margin-bottom: 0.8rem;
+    font-size: clamp(13px, 1.1vw, 15px);
+    letter-spacing: 0.04em;
+}
+
+/* Rhythm staccato — slightly bigger, left-accented */
+.story-staccato--rhythm {
+    border-left: 2px solid rgba(230, 255, 0, 0.4);
+    margin-bottom: 1.6rem;
+}
+
+.story-staccato--rhythm span {
+    font-family: var(--font-sec);
+    font-size: clamp(15px, 1.4vw, 18px);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: var(--color-text-white);
+    opacity: 0.8;
+    text-transform: none;
+}
+
+/* Always staccato — subtle, smaller */
+.story-staccato--always {
+    border-left: none;
+    padding-left: 0;
+    gap: 0.3rem;
+    margin-bottom: 0;
+}
+
+.story-staccato--always span {
+    font-family: var(--font-sec);
+    font-size: clamp(13px, 1.1vw, 15px);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--color-highlight);
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+/* --- Bridge (distilled origin) --- */
+.story-bridge {
+    margin-bottom: 9rem;
+    padding: 6rem 0;
+    border-top: 1px solid rgba(247, 243, 234, 0.1);
+}
+
+.story-bridge-inner {
+    max-width: 760px;
+}
+
+.story-bridge-p {
+    font-family: var(--font-sec);
+    font-size: clamp(15px, 1.3vw, 18px);
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--color-text-white);
+    opacity: 0.6;
+    margin-bottom: 1.6rem;
+}
+
+.story-bridge-p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Manifesto --- */
+
+.story-manifesto {
+    margin-bottom: 9rem;
+    padding: 6rem 0;
+    border-top: 1px solid rgba(247, 243, 234, 0.1);
+    border-bottom: 1px solid rgba(247, 243, 234, 0.1);
+}
+
+.manifesto-line {
+    font-family: var(--font-main);
+    font-size: clamp(26px, 3.5vw, 48px);
+    font-weight: 300;
+    color: var(--color-text-white);
+    opacity: 1;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(247, 243, 234, 0.07);
+}
+
+.manifesto-line:last-child {
+    border-bottom: none;
+}
+
+/* --- Closing --- */
+.story-close {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.story-close-quote {
+    font-family: var(--font-main);
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--color-text-white);
+    opacity: 0.95;
+    border-left: 3px solid var(--color-highlight);
+    padding-left: 2rem;
+    font-style: normal;
+}
+
+.story-close-right {
+    font-family: var(--font-sec);
+    font-size: clamp(13px, 1.1vw, 15px);
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--color-text-white);
+    opacity: 0.4;
+    letter-spacing: 0.02em;
+}
+
+/* story-close right side wrapper (image + text stacked) */
+.story-close-right-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Full-width image break between opening and body */
+.story-img-break {
+    margin-bottom: 8rem;
     overflow: hidden;
-    position: relative;
+    border-radius: 6px;
 }
 
-.story-block .story-image img {
+.story-img-break--wide {
+    height: 480px;
+}
+
+.story-img-break img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.5s ease-out;
-}
-
-.story-block:hover .story-image img {
-    transform: scale(1.05);
-}
-
-@media (max-width: 1024px) {
-    .story-block {
-        padding: 4rem 2rem;
-        flex-direction: column !important;
-        gap: 3rem;
-        min-height: auto;
-    }
-
-    .story-block .story-image {
-        width: 100%;
-        height: 45vh;
-        flex: none;
-    }
-
-    .story-block .story-text {
-        text-align: center;
-    }
-
-    .story-block .story-text h2 {
-        font-size: 2.8rem;
-    }
-}
-
-.story-quote-block {
-    padding: 15rem 4rem;
-    text-align: center;
-    background: linear-gradient(to bottom, transparent, rgba(230, 255, 0, 0.03), transparent);
-}
-
-.story-quote-block h3 {
-    font-family: var(--font-main);
-    font-size: clamp(32px, 5vw, 64px);
-    color: var(--color-text-white);
-    max-width: 1000px;
-    margin: 0 auto;
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-}
-
-.story-quote-block .quote-tag {
-    font-family: var(--font-sec);
-    color: var(--color-highlight);
-    margin-top: 2rem;
+    filter: brightness(0.85) saturate(1.1);
     display: block;
-    font-size: 0.8rem;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    opacity: 0.6;
-    text-transform: uppercase;
+}
+
+/* Inset image inside story body right column */
+.story-inline-img {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(230, 255, 0, 0.08);
+}
+
+.story-inline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) saturate(1.1);
+    display: block;
+    transition: transform 10s ease;
+}
+
+.story-inline-img:hover img {
+    transform: scale(1.04);
+}
+
+/* Closing image */
+.story-close-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba(230, 255, 0, 0.08);
+}
+
+.story-close-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75) saturate(1.1);
+    display: block;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .our-story {
+        padding: 6rem 2rem;
+    }
+
+    .story-opening {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .story-img-break {
+        margin-bottom: 4rem;
+    }
+
+    .story-img-break--wide {
+        height: 280px;
+    }
+
+    .story-body {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 5rem;
+    }
+
+    .story-inline-img {
+        height: 220px;
+        margin-bottom: 1.5rem;
+    }
+
+    .story-manifesto {
+        margin-bottom: 5rem;
+        padding: 4rem 0;
+    }
+
+    .manifesto-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1em;
+    }
+
+    .story-close {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .story-close-img {
+        height: 180px;
+    }
 }
 
 .process-grid {
@@ -1544,5 +1787,69 @@ body.intro-scroll {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+/* ===================================
+   MENU PAGE — HERO TEXT
+   =================================== */
+
+.page-title em {
+    font-style: italic;
+    color: var(--color-highlight);
+}
+
+.menu-hero-lead {
+    font-family: var(--font-sec);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--color-text-white);
+    opacity: 0.85;
+    margin-bottom: 1.8rem;
+}
+
+.menu-hero-body {
+    font-family: var(--font-sec);
+    font-size: clamp(14px, 1.3vw, 17px);
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--color-text-white);
+    opacity: 0.5;
+    margin-bottom: 1.2rem;
+}
+
+/* ===================================
+   MENU PAGE — CLOSING MANIFESTO
+   =================================== */
+
+.menu-manifesto {
+    padding: 8rem 4rem;
+    border-top: 1px solid rgba(247, 243, 234, 0.1);
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-manifesto-line {
+    font-family: var(--font-main);
+    font-size: clamp(28px, 3.5vw, 52px);
+    font-weight: 300;
+    color: var(--color-highlight);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    padding: 0.6rem 0;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 1024px) {
+    .menu-manifesto {
+        padding: 5rem 2rem;
+    }
+
+    .menu-manifesto-line {
+        font-size: clamp(22px, 5vw, 36px);
+        padding: 1rem 0;
     }
 }
