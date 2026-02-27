@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inquiry.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
     </header>
 
     <section class="page-hero">
+        <img src="images/logo-khaima.png" alt="" class="story-logo-watermark" aria-hidden="true">
         <div class="hero-content-wrapper">
             <div class="hero-text-side">
                 <h1 class="page-title">Our<br><em>Menu</em></h1>
@@ -335,35 +337,120 @@
         </div>
     </main>
 
-    <section class="contact-section" id="enquiry"
-        style="padding: 8rem 4rem; border-top: 1px solid rgba(230, 255, 0, 0.1); text-align: center;">
-        <div style="margin-bottom: 4rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-                <a href="#menu-cards" class="arrow-icon" style="transform: rotate(-90deg); display: flex;">→</a>
-                <span
-                    style="font-family: var(--font-sec); font-size: 0.7rem; letter-spacing: 0.2rem; color: var(--color-highlight); opacity: 1; text-transform: uppercase;">Scroll
-                    to see menu</span>
-            </div>
-            <h2 class="section-title" style="margin-bottom: 2rem;">Get in <br><em>Touch</em></h2>
-            <p class="menu-hero-body" style="max-width: 600px; margin: 0 auto;">
-                Ready to elevate your retreat experience? Contact us directly to discuss your vision and receive a
-                curated menu proposal.
-            </p>
-        </div>
+    <section class="contact-section inquiry-embed" id="enquiry"
+        style="padding: 6rem 4rem 8rem; border-top: 1px solid rgba(230, 255, 0, 0.1); text-align: left;">
+        <div class="inquiry-layout" style="max-width: 1100px; margin: 0 auto;">
+            <aside class="inquiry-panel">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Get in <br><em>Touch</em></h2>
+                <p class="inquiry-panel-subline" style="margin-bottom: 1.5rem;">Tell us about your plans</p>
+                <p class="inquiry-panel-italic" style="margin-bottom: 1.5rem;">We read every submission. We reply within 24 hours. We'd love to work with you.</p>
+                <hr class="inquiry-panel-hr">
+                <div class="inquiry-panel-contact">
+                    <div class="contact-item-block">
+                        <p class="tap-hint">Email</p>
+                        <a href="mailto:thibault@epevents.net"
+                            style="font-family: var(--font-main); font-size: 1.75rem; font-weight: 300; color: var(--color-text-white);">thibault@epevents.net</a>
+                    </div>
+                    <div class="contact-item-block">
+                        <p class="tap-hint">Phone</p>
+                        <a href="tel:+66838798876"
+                            style="font-family: var(--font-main); font-size: 1.75rem; font-weight: 300; color: var(--color-text-white);">+66 83 879 8876</a>
+                    </div>
+                </div>
+            </aside>
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 3rem; margin-top: 2rem;">
-            <div class="contact-item">
-                <p class="tap-hint" style="margin-bottom: 0.5rem;">Email Us</p>
-                <a href="mailto:thibault@epevents.net"
-                    style="font-family: var(--font-main); font-size: 2.5rem; font-weight: 300; color: var(--color-text-white); transition: var(--transition-fast);">thibault@epevents.net</a>
-            </div>
-
-            <div class="contact-item">
-                <p class="tap-hint" style="margin-bottom: 0.5rem;">Phone</p>
-                <a href="tel:+66838798876"
-                    style="font-family: var(--font-main); font-size: 2.5rem; font-weight: 300; color: var(--color-text-white); transition: var(--transition-fast);">+66
-                    83 879 8876</a>
-            </div>
+            <main class="inquiry-main">
+                <form id="inquiryForm" class="inquiry-form" novalidate>
+                    <div class="inquiry-field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="inquiry-error" id="error-name" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="inquiry-error" id="error-email" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label>Type of event</label>
+                        <div class="inquiry-pills" role="group" aria-label="Type of event">
+                            <input type="radio" name="event_type" id="ev-yoga" value="Yoga Retreat" required>
+                            <label for="ev-yoga">Yoga Retreat</label>
+                            <input type="radio" name="event_type" id="ev-wellness" value="Wellness Retreat">
+                            <label for="ev-wellness">Wellness Retreat</label>
+                            <input type="radio" name="event_type" id="ev-villa" value="Villa Dinner">
+                            <label for="ev-villa">Villa Dinner</label>
+                            <input type="radio" name="event_type" id="ev-private" value="Private Event">
+                            <label for="ev-private">Private Event</label>
+                            <input type="radio" name="event_type" id="ev-other" value="Other">
+                            <label for="ev-other">Other</label>
+                        </div>
+                        <span class="inquiry-error" id="error-event_type" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="location">Location on Koh Phangan</label>
+                        <input type="text" id="location" name="location" placeholder="Villa name, area, or address" required>
+                        <span class="inquiry-error" id="error-location" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="guests">Number of guests</label>
+                        <input type="number" id="guests" name="guests" placeholder="e.g. 12" min="1" required>
+                        <span class="inquiry-error" id="error-guests" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field inquiry-dates">
+                        <label>Dates <span class="inquiry-date-hint">(click to open calendar)</span></label>
+                        <div class="inquiry-date-row">
+                            <div class="inquiry-field-inline">
+                                <label for="date_from">From</label>
+                                <input type="date" id="date_from" name="date_from" required>
+                            </div>
+                            <div class="inquiry-field-inline">
+                                <label for="date_to">To</label>
+                                <input type="date" id="date_to" name="date_to" required>
+                            </div>
+                        </div>
+                        <span class="inquiry-error" id="error-dates" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label>Meals needed</label>
+                        <div class="inquiry-pills inquiry-pills-multi" role="group" aria-label="Meals needed">
+                            <input type="checkbox" name="meals" id="meal-breakfast" value="Breakfast">
+                            <label for="meal-breakfast">Breakfast</label>
+                            <input type="checkbox" name="meals" id="meal-lunch" value="Lunch">
+                            <label for="meal-lunch">Lunch</label>
+                            <input type="checkbox" name="meals" id="meal-dinner" value="Dinner">
+                            <label for="meal-dinner">Dinner</label>
+                            <input type="checkbox" name="meals" id="meal-fullday" value="Full Day">
+                            <label for="meal-fullday">Full Day</label>
+                        </div>
+                        <span class="inquiry-error" id="error-meals" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label>Dietary requirements</label>
+                        <div class="inquiry-pills inquiry-pills-multi" role="group" aria-label="Dietary requirements">
+                            <input type="checkbox" name="dietary" id="diet-veg" value="Vegetarian">
+                            <label for="diet-veg">Vegetarian</label>
+                            <input type="checkbox" name="dietary" id="diet-vegan" value="Vegan">
+                            <label for="diet-vegan">Vegan</label>
+                            <input type="checkbox" name="dietary" id="diet-gf" value="Gluten-free">
+                            <label for="diet-gf">Gluten-free</label>
+                            <input type="checkbox" name="dietary" id="diet-none" value="No restrictions">
+                            <label for="diet-none">No restrictions</label>
+                        </div>
+                        <span class="inquiry-error" id="error-dietary" aria-live="polite"></span>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="notes">Anything else we should know?</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Optional"></textarea>
+                    </div>
+                    <button type="submit" class="inquiry-submit">Send inquiry</button>
+                </form>
+                <div id="inquirySuccess" class="inquiry-success" hidden>
+                    <p class="inquiry-success-text">Thank you. We'll be in touch shortly.</p>
+                    <p class="inquiry-success-email" id="inquirySuccessEmail"></p>
+                </div>
+                <p id="inquirySubmitError" class="inquiry-submit-error" hidden></p>
+            </main>
         </div>
     </section>
 
@@ -383,6 +470,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/inquiry.js"></script>
 </body>
 
 </html>

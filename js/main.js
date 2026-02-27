@@ -183,11 +183,12 @@ function toggleMenuBlock(id) {
 }
 
 // ===================================
-// Intro Overlay Handling
+// Intro Overlay Handling (skipped: site opens directly on hero)
 // ===================================
 const introOverlay = document.getElementById('intro-overlay');
 if (introOverlay) {
-    document.body.classList.add('intro-active');
+    introOverlay.classList.add('dismissed');
+    document.body.classList.add('intro-scroll');
 }
 
 function unlockScroll() {

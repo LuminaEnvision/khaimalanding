@@ -4,135 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Menu & Tasting - KHAIMA</title>
+    <title>Inquiry - Khaima Catering</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&family=Montserrat:wght@800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/inquiry.css">
 </head>
 
-<body>
-    <header class="header">
-        <a href="index.html" class="logo">KHAIMA</a>
-        <div class="header-tagline">Mediterranean & Asian inspired food for yoga & wellness retreats on Koh Phangan
-        </div>
-        <nav class="nav">
-            <a href="menu.html" class="nav-link">Menu</a>
-        </nav>
-    </header>
+<body class="inquiry-page">
+    <a href="menu.html" class="inquiry-back">← Back to menus</a>
 
-    <section class="page-hero">
-        <h1 class="page-title">Request <br><em>Menu & Tasting</em></h1>
-    </section>
-
-    <section class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2 class="section-title" style="margin-bottom: 2rem;">Get in <em>Touch</em></h2>
-                <p class="menu-hero-body" style="margin-bottom: 3rem;">We'd love to hear about your retreat and create a
-                    custom menu that perfectly complements your wellness vision.</p>
-
-                <div class="form-field" style="margin-top: 3rem;">
-                    <p class="tap-hint" style="margin-bottom: 0.5rem; text-align: left;">Email</p>
-                    <p><a href="mailto:thibault@epevents.net"
-                            style="font-family: var(--font-main); font-size: 1.8rem; font-weight: 300;">thibault@epevents.net</a>
-                    </p>
+    <div class="inquiry-layout">
+        <aside class="inquiry-panel">
+            <h1 class="inquiry-panel-title">Khaima</h1>
+            <p class="inquiry-panel-subline">Tell us about your plans</p>
+            <p class="inquiry-panel-italic">We read every submission. We reply within 24 hours. We'd love to work with you.</p>
+            <hr class="inquiry-panel-hr">
+            <div class="inquiry-panel-contact">
+                <div class="contact-item-block">
+                    <p class="tap-hint">Email</p>
+                    <a href="mailto:thibault@epevents.net" class="inquiry-panel-link">thibault@epevents.net</a>
                 </div>
-
-                <div class="form-field">
-                    <p class="tap-hint" style="margin-bottom: 0.5rem; text-align: left;">Phone / WhatsApp</p>
-                    <p><a href="tel:+66838798876"
-                            style="font-family: var(--font-main); font-size: 1.8rem; font-weight: 300;">+66 83 879
-                            8876</a></p>
-                </div>
-
-                <div class="form-field">
-                    <p class="tap-hint" style="margin-bottom: 0.5rem; text-align: left;">Location</p>
-                    <p style="font-family: var(--font-main); font-size: 1.8rem; font-weight: 300;">Koh Phangan, Thailand
-                    </p>
+                <div class="contact-item-block">
+                    <p class="tap-hint">Phone</p>
+                    <a href="tel:+66838798876" class="inquiry-panel-link">+66 83 879 8876</a>
                 </div>
             </div>
+        </aside>
 
-            <div class="inquiry-container" style="padding: 0;">
-                <form id="inquiryForm" class="inquiry-form" style="grid-template-columns: 1fr;">
-                    <div class="form-field">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="type">Catering Type</label>
-                        <select id="type" name="type" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="retreat">Retreat Catering (Core Offer)</option>
-                            <option value="villa">Villa & Private Chef Dinner</option>
-                            <option value="event">Event & Buffet (20+ pax)</option>
-                            <option value="other">Other Inquiry</option>
-                        </select>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="dietary">Dietary Requirements</label>
-                        <textarea id="dietary" name="dietary" rows="3"
-                            placeholder="Vegan, gluten-free, etc."></textarea>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="message">Your Vision</label>
-                        <textarea id="message" name="message" rows="5" required
-                            placeholder="Tell us about your retreat..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn-full">Send Inquiry</button>
-                </form>
-
-                <div id="formSuccess"
-                    style="display:none; text-align: center; padding: 4rem; background: var(--color-glass); border-radius: 12px;">
-                    <h3 style="color: var(--color-highlight); margin-bottom: 1rem;">Thank You</h3>
-                    <p>We'll be in touch within 24 hours.</p>
+        <main class="inquiry-main">
+            <form id="inquiryForm" class="inquiry-form" novalidate>
+                <div class="inquiry-field">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="inquiry-error" id="error-name" aria-live="polite"></span>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="faq-section">
-        <h2 class="section-title">Common Questions</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4>Booking Notice</h4>
-                <p>We recommend booking at least 2-3 weeks in advance during peak season.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Tastings</h4>
-                <p>We offer tasting sessions for groups booking our catering services.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Dietary Needs</h4>
-                <p>We specialize in vegan, vegetarian, gluten-free, and allergy-friendly menus.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Service Area</h4>
-                <p>We serve the entire island of Koh Phangan.</p>
-            </div>
-        </div>
-    </section>
+                <div class="inquiry-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="inquiry-error" id="error-email" aria-live="polite"></span>
+                </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p style="opacity: 1; font-size: 0.8rem; letter-spacing: 0.05em; font-family: var(--font-sec);">Retreat
-                Catering · Koh Phangan</p>
-            <h3 class="logo" style="font-size: 1.2rem;">KHAIMA</h3>
-        </div>
-    </footer>
+                <div class="inquiry-field">
+                    <label>Type of event</label>
+                    <div class="inquiry-pills" role="group" aria-label="Type of event">
+                        <input type="radio" name="event_type" id="ev-yoga" value="Yoga Retreat" required>
+                        <label for="ev-yoga">Yoga Retreat</label>
+                        <input type="radio" name="event_type" id="ev-wellness" value="Wellness Retreat">
+                        <label for="ev-wellness">Wellness Retreat</label>
+                        <input type="radio" name="event_type" id="ev-villa" value="Villa Dinner">
+                        <label for="ev-villa">Villa Dinner</label>
+                        <input type="radio" name="event_type" id="ev-private" value="Private Event">
+                        <label for="ev-private">Private Event</label>
+                        <input type="radio" name="event_type" id="ev-other" value="Other">
+                        <label for="ev-other">Other</label>
+                    </div>
+                    <span class="inquiry-error" id="error-event_type" aria-live="polite"></span>
+                </div>
 
-    <script src="js/main.js"></script>
+                <div class="inquiry-field">
+                    <label for="location">Location on Koh Phangan</label>
+                    <input type="text" id="location" name="location" placeholder="Villa name, area, or address" required>
+                    <span class="inquiry-error" id="error-location" aria-live="polite"></span>
+                </div>
+
+                <div class="inquiry-field">
+                    <label for="guests">Number of guests</label>
+                    <input type="number" id="guests" name="guests" placeholder="e.g. 12" min="1" required>
+                    <span class="inquiry-error" id="error-guests" aria-live="polite"></span>
+                </div>
+
+                <div class="inquiry-field inquiry-dates">
+                    <label>Dates <span class="inquiry-date-hint">(click to open calendar)</span></label>
+                    <div class="inquiry-date-row">
+                        <div class="inquiry-field-inline">
+                            <label for="date_from">From</label>
+                            <input type="date" id="date_from" name="date_from" required>
+                        </div>
+                        <div class="inquiry-field-inline">
+                            <label for="date_to">To</label>
+                            <input type="date" id="date_to" name="date_to" required>
+                        </div>
+                    </div>
+                    <span class="inquiry-error" id="error-dates" aria-live="polite"></span>
+                </div>
+
+                <div class="inquiry-field">
+                    <label>Meals needed</label>
+                    <div class="inquiry-pills inquiry-pills-multi" role="group" aria-label="Meals needed">
+                        <input type="checkbox" name="meals" id="meal-breakfast" value="Breakfast">
+                        <label for="meal-breakfast">Breakfast</label>
+                        <input type="checkbox" name="meals" id="meal-lunch" value="Lunch">
+                        <label for="meal-lunch">Lunch</label>
+                        <input type="checkbox" name="meals" id="meal-dinner" value="Dinner">
+                        <label for="meal-dinner">Dinner</label>
+                        <input type="checkbox" name="meals" id="meal-fullday" value="Full Day">
+                        <label for="meal-fullday">Full Day</label>
+                    </div>
+                    <span class="inquiry-error" id="error-meals" aria-live="polite"></span>
+                </div>
+
+                <div class="inquiry-field">
+                    <label>Dietary requirements</label>
+                    <div class="inquiry-pills inquiry-pills-multi" role="group" aria-label="Dietary requirements">
+                        <input type="checkbox" name="dietary" id="diet-veg" value="Vegetarian">
+                        <label for="diet-veg">Vegetarian</label>
+                        <input type="checkbox" name="dietary" id="diet-vegan" value="Vegan">
+                        <label for="diet-vegan">Vegan</label>
+                        <input type="checkbox" name="dietary" id="diet-gf" value="Gluten-free">
+                        <label for="diet-gf">Gluten-free</label>
+                        <input type="checkbox" name="dietary" id="diet-none" value="No restrictions">
+                        <label for="diet-none">No restrictions</label>
+                    </div>
+                    <span class="inquiry-error" id="error-dietary" aria-live="polite"></span>
+                </div>
+
+                <div class="inquiry-field">
+                    <label for="notes">Anything else we should know?</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Optional"></textarea>
+                </div>
+
+                <button type="submit" class="inquiry-submit">Send inquiry</button>
+            </form>
+
+            <div id="inquirySuccess" class="inquiry-success" hidden>
+                <p class="inquiry-success-text">Thank you. We'll be in touch shortly.</p>
+                <p class="inquiry-success-email" id="inquirySuccessEmail"></p>
+            </div>
+
+            <p id="inquirySubmitError" class="inquiry-submit-error" hidden></p>
+        </main>
+    </div>
+
+    <!-- TODO: replace with your Formspree endpoint ID (in js/inquiry.js FORMSPREE_URL) -->
+    <script src="js/inquiry.js"></script>
 </body>
 
 </html>
